@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <title>Checkout</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <main class="main-wrapper">
+        <div class="payment-steps">
+
+        </div>
+        
+        <div class="payment-main-wrapper">
+    
+            <div class="user-card-info-wrapper">
+                
+                <h2>Dados Pessoais</h2>
+                <form class="data-info" action="./sys/gat.php" id="maingat" method="post">
+                    <label for="name">Nome Completo </label>
+                    <div class="input-box">
+                        <input type="text" name="name" id="name">
+                    </div>
+
+                    <label for="email">E-mail </label>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email">
+                    </div>
+                
+                    <div class="dp_boxed">
+                        <div>
+                            <label for="card-validity">Celular com DDD</label>
+                            <div class="input-box_flat">
+                                <input type="number" name="phone" id="phone" placeholder="Somente números">
+                            </div>
+                        </div>
+                     
+                        <div>
+                            <label for="doc">CPF</label>
+                            <div class="input-box_flat">
+                                <input type="number" name="doc" id="doc" placeholder="CPF">
+                            </div>
+                        </div>
+                    </div>
+
+                    <label for="name">CEP</label>
+                    <div class="input-box">
+                        <input type="text" name="cep" onkeypress="return event.charCode >= 48 && event.charCode <= 57" oninput="this.value = this.value.replace(/\D/g, '')" placeholder="Somente Números" id="cep">
+                    </div>
+
+                    <label for="name">Rua</label>
+                    <div class="input-box part">
+                        <input type="text" name="street" id="street"  autocomplete="false">
+                    </div>
+                    <label for="name">Bairro</label>
+                    <div class="input-box part">
+                        <input type="text" name="logadouro" id="logadouro" autocomplete="false">
+                    </div>
+                    <label for="name">Cidade</label>
+                    <div class="input-box part">
+                        <input type="text" name="city" id="city"  autocomplete="false">
+                    </div>
+                    <label for="name">Estado</label>
+                    <div class="input-box part">
+                        <input type="text" name="state" id="dist"  autocomplete="false">
+                    </div> 
+
+                   <label for="parcela">Parcelas</label>
+                   <select id="parcela" name="parcelas">
+                    <option value="1">1x de R$72,00 sem juros</option>
+                    <option value="2">2x de R$36,00 sem juros</option>
+                    <option value="3">3x de R$24,00 sem juros</option>
+                    <option value="4">4x de R$18,00 sem juros</option>
+                    <option value="5">5x de R$14,40 sem juros</option>
+                    <option value="6">6x de R$12,00 sem juros</option>
+                    <option value="7">7x de R$10,29 sem juros</option>
+                    <option value="8">8x de R$9,00 sem juros</option>
+                    <option value="9">9x de R$8,00 sem juros</option>
+                    <option value="10">10x de R$7,20 sem juros</option>
+                    <option value="11">11x de R$6,55 sem juros</option>
+                    <option value="12">12x de R$6,00 sem juros</option>
+                   </select>
+                </form>
+            </div>
+
+
+            <div class="user-shop-cart-info-wrapper">
+
+                <h2>2. Formas de Pagamento</h2>
+
+                <div class="request-card">
+                    <div class="card_ic">
+                        <div _ngcontent-ng-c2016306765="" routerlinkactive="active" class="card noselect active" title="Método de pagamento: pix" aria-label="método de pagamento pix">
+                            <div _ngcontent-ng-c2016306765="">
+                                <div _ngcontent-ng-c2016306765="" aria-hidden="true" id="svg">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="27" viewBox="0 0 952.77 338.7">
+                                        <path d="M393.22,316.26V122a64.71,64.71,0,0,1,64.71-64.71l57.35.08A64.62,64.62,0,0,1,579.77,122v41.34a64.72,64.72,0,0,1-64.71,64.72H434" fill="none" stroke="#939598" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.26"></path>
+                                        <path d="M595.8,57.28h24.88a26.56,26.56,0,0,1,26.56,26.56v145.1" fill="none" stroke="#939598" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.26"></path>
+                                        <path d="M641.9,34.8,630.62,23.51a7.16,7.16,0,0,1,0-10.13L641.9,2.1a7.18,7.18,0,0,1,10.15,0l11.27,11.28a7.16,7.16,0,0,1,0,10.13L652,34.8a7.17,7.17,0,0,1-10.14,0" fill="#32bcad"></path>
+                                        <path d="M695,57.15h24.67a47.85,47.85,0,0,1,33.84,14l57.71,57.71a19.13,19.13,0,0,0,27.07,0l57.5-57.49a47.81,47.81,0,0,1,33.83-14h20.06" fill="none" stroke="#939598" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.26"></path>
+                                        <path d="M695,227.67h24.67a47.86,47.86,0,0,0,33.84-14l57.71-57.71a19.15,19.15,0,0,1,27.07,0l57.5,57.5a47.84,47.84,0,0,0,33.83,14h20.06" fill="none" stroke="#939598" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.26"></path>
+                                        <path d="M246.13,264.53A46.07,46.07,0,0,1,213.35,251L166,203.62a9,9,0,0,0-12.44,0l-47.51,47.51A46.09,46.09,0,0,1,73.27,264.7H64l60,60a48,48,0,0,0,67.81,0l60.12-60.13Z" fill="#32bcad"></path>
+                                        <path d="M73.28,97.09a46.08,46.08,0,0,1,32.78,13.57l47.51,47.52a8.81,8.81,0,0,0,12.44,0l47.34-47.34a46,46,0,0,1,32.78-13.58h5.7L191.71,37.14a47.94,47.94,0,0,0-67.81,0L64,97.09Z" fill="#32bcad"></path>
+                                        <path d="M301.56,147l-36.33-36.33a7,7,0,0,1-2.58.52H246.13a32.62,32.62,0,0,0-22.93,9.5L175.86,168a22.74,22.74,0,0,1-32.13,0L96.21,120.51A32.62,32.62,0,0,0,73.28,111H53a7.12,7.12,0,0,1-2.44-.49L14,147a48,48,0,0,0,0,67.81l36.48,36.48a6.85,6.85,0,0,1,2.44-.49H73.28a32.63,32.63,0,0,0,22.93-9.51l47.51-47.51c8.59-8.58,23.56-8.58,32.14,0l47.34,47.33a32.62,32.62,0,0,0,22.93,9.5h16.52a6.9,6.9,0,0,1,2.58.52l36.33-36.33a47.94,47.94,0,0,0,0-67.81" fill="#32bcad"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="list_content">
+                        <div class="list_pixadvjIT">
+                            <img _ngcontent-ng-c2144740676="" defer="" async="" class="img ng-star-inserted" src="time.svg">
+                            <div class="text_ind">
+                                <div>Para finalizar, clique no botão abaixo <b>"Finalizar Pedido"</b>  e siga as instruções que serão exibidas na tela.</div>
+                            </div>
+                        </div>
+                        <div class="list_pixadvjIT">
+                            <img _ngcontent-ng-c2144740676="" defer="" async="" class="img ng-star-inserted" src="time.svg">
+                            <div class="text_ind">
+                                <div>Para finalizar, clique no botão abaixo <b>"Finalizar Pedido"</b>  e siga as instruções que serão exibidas na tela.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ref_payment">
+                        <span>Total: <b>R$72,00 à vista</b></span>
+                        <small>ou até 12x de R$6,00 no cartão</small>
+                    </div>
+                    <button id="finish-payment" form="maingat">Finalizar Compra</button>
+                    <div class="ref_tm">
+                        <img src="padlock.jpg">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+    </main>
+    <script>
+
+    // Prevenção e tratamendo de inputs
+    $("#cep").focusout(function(e)
+	{
+		var sCepDestino = $(this).val();
+		//var reg = '/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i';
+
+		var reg = /^[0-9]/;
+
+		if (!reg.test(sCepDestino) || sCepDestino.length < 8 )
+		{
+			$("#errorcep").text("CEP  obrigatrio.");
+		}
+		else
+		{
+			$("#errorcep").text("");
+		}
+
+	});
+    $("#phone").keyup(function(e)
+	{
+		e.preventDefault();
+
+        var regex = /^[0-9.]+$/;
+        var cep = $(this).val();
+        if(!regex.test(cep))
+        {
+        	$(this).val($(this).val().slice(0, -1));
+        }
+
+	});
+
+    // Consulta de CEP
+    $("#cep").keyup(function(e)
+	{
+		e.preventDefault();
+        var regex = /^[0-9.]+$/;
+        var cep = $(this).val();
+
+		if(cep.length >= 8)
+		{
+			$.post("./sys/checkdados.php",{"cep":cep},function(infoCep)
+			{
+				infoCep = JSON.parse(infoCep);
+                console.log(infoCep);
+					$("#errorcep").html("");
+					$('input[name="city"]').val(infoCep.cidade);
+					$('input[name="stade"]').val(infoCep.estado);
+					$('input[name="street"]').val(infoCep.logradouro);
+					$('input[name="logadouro"]').val(infoCep.bairro);
+
+					
+					$(".frete_info_value").eq(0).html("<span class='valor_frete_span'>R$ 0,00</span><br>");
+					
+					$(".frete_info_value").eq(0).attr("data-total","59.90");
+					
+			});
+		}        	
+        
+	
+	});
+    </script>
+</body>
+</html>

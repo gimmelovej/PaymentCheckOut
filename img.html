@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar QR Code</title>
+    <!-- Incluindo a biblioteca QRCode.js -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <h1>QR Code de Transação</h1>
+    
+    <!-- Div para exibir o QR Code -->
+    <div id="qrcode"></div>
+
+    <script type="text/javascript">
+        // A string Base64 que você forneceu
+        var base64String = "00020126850014br.gov.bcb.pix2563pix.voluti.com.br/qr/v3/at/cd79a2f1-a38f-4890-85da-98a9957c973d5204000053039865802BR5925WEB_GATE_PROCESSADORES_DE6007GOIANIA62070503***6304FABE";
+
+        // Gerar o QR Code usando a biblioteca QRCode.js
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: base64String,
+            width: 500,  // Largura do QR Code
+            height: 500, // Altura do QR Code
+            colorDark: "#000000",  // Cor do QR Code (preto)
+            colorLight: "#ffffff", // Cor de fundo (branco)
+            correctLevel: QRCode.CorrectLevel.H // Nível de correção de erros (H é o mais alto)
+        });
+    </script>
+</body>
+</html>
